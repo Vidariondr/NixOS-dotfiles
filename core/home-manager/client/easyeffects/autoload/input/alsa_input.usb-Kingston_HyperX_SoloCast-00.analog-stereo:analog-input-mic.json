@@ -1,0 +1,6 @@
+{
+    "device": "alsa_input.usb-Kingston_HyperX_SoloCast-00.analog-stereo",
+    "device-description": "HyperX SoloCast Analog Stereo",
+    "device-profile": "analog-input-mic",
+    "preset-name": "Microphone"
+}

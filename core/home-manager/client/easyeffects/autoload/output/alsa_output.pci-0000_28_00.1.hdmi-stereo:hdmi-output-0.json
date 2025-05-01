@@ -1,0 +1,6 @@
+{
+    "device": "alsa_output.pci-0000_28_00.1.hdmi-stereo",
+    "device-description": "HDA ATI HDMI Digital Stereo (HDMI)",
+    "device-profile": "hdmi-output-0",
+    "preset-name": "MDR-7506"
+}
