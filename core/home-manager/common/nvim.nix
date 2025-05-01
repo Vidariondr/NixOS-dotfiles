@@ -31,7 +31,6 @@
         enable = true;
         formatOnSave = true;
         lspkind.enable = true;
-        lsplines.enable = true;
         lspsaga.enable = true;
         lspSignature.enable = true;
         trouble.enable = true;
