@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
-    nixpkgs-2405.url = "github:nixos/nixpkgs/nixos-24.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
     nvf.url = "github:notashelf/nvf";
@@ -20,7 +19,6 @@
   outputs = {
     nixpkgs,
     nixpkgs-unstable,
-    nixpkgs-2405,
     nixos-hardware,
     nvf,
     lanzaboote,
@@ -32,7 +30,7 @@
       system = "x86_64-linux";
 
       # Passing variables to other modules
-      specialArgs = {inherit inputs nixpkgs-unstable nixpkgs-2405 nvf;};
+      specialArgs = {inherit inputs nixpkgs-unstable nvf;};
 
       modules = [
         # Main configuration.nix module
@@ -51,7 +49,7 @@
       system = "x86_64-linux";
 
       # Passing variables to other modules
-      specialArgs = {inherit inputs nixpkgs-unstable nixpkgs-2405 nvf;};
+      specialArgs = {inherit inputs nixpkgs-unstable nvf;};
 
       modules = [
         # Main configuration.nix module

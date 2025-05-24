@@ -1,6 +1,5 @@
 {
   nixpkgs-unstable,
-  nixpkgs-2405,
   nvf,
   inputs,
   ...
@@ -15,7 +14,6 @@
   in {
     inherit inputs;
     pkgs-unstable = import nixpkgs-unstable pkgs-config;
-    pkgs-2405 = import nixpkgs-2405 pkgs-config;
   };
 
   home-manager.useGlobalPkgs = true;
