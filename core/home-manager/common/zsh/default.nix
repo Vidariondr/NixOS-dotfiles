@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   home.packages = with pkgs; [
     pure-prompt
   ];
@@ -36,14 +40,6 @@
     # Autoloads completion
     completionInit = "autoload -Uz compinit; compinit; _comp_options+=(globdots)";
     enableCompletion = true;
-    # 1. Menu selection for completions
-    # 2. Allow gaining privileges in completion
-    # 3. Fuzzy matching for any part of the file name
-    initExtra = ''
-      zstyle ':completion:*' menu select
-      zstyle ':completion::complete:*' gain-privileges 1
-      zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'l:|=*'
-    '';
 
     # Allows terminals to track the current working dir
     enableVteIntegration = true;
@@ -54,10 +50,16 @@
     };
 
     # First three lines load the pure-prompt
-    initExtraFirst = ''
+    # 1. Menu selection for completions
+    # 2. Allow gaining privileges in completion
+    # 3. Fuzzy matching for any part of the file name
+    initContent = lib.mkBefore ''
       fpath=("${pkgs.pure-prompt}/share/zsh/site-functions")
       autoload -Uz promptinit; promptinit
       prompt pure
+      zstyle ':completion:*' menu select
+      zstyle ':completion::complete:*' gain-privileges 1
+      zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'l:|=*'
     '';
   };
 }
