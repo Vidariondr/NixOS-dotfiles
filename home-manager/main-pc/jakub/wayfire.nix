@@ -28,7 +28,7 @@
 
     # List of plugins to be enabled.
     # See the Configuration document for a complete list.
-    plugins = alpha animate autostart command decoration expo fast-switcher grid gtk-shell move oswitch place resize switcher vswitch wayfire-shell window-rules wm-actions zoom foreign-toplevel
+    plugins = alpha animate autostart command decoration expo fast-switcher grid gtk-shell move oswitch place resize switcher vswitch wayfire-shell window-rules wm-actions zoom foreign-toplevel xdg-activation
 
     # Close focused window.
     close_top_view = <super> <shift> KEY_C | <alt> KEY_F4
@@ -258,6 +258,11 @@
     # Send toggle menu event.
     [wayfire-shell]
     toggle_menu = <super>
+
+    # Solve focusing issues
+    [xdg-activation]
+    check_surface = true
+    only_last_request = true
   '';
 
   home.file.".config/wf-shell.ini".text = ''
