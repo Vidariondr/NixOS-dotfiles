@@ -4,6 +4,6 @@
     ../../../core/home-manager/client
     ./packages.nix
     ./waybar.nix
-    ./wayfire.nix
+    ./wayfire
   ];
 }
