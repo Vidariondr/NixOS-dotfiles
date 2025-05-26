@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
+{pkgs, ...}: {
   home.file.".config/wayfire.ini".text = ''
     # Input configuration ──────────────────────────────────────────────────────────
 
@@ -88,7 +84,7 @@
 
     # XDG desktop portal
     # Needed by some GTK applications
-    portal = /usr/libexec/xdg-desktop-portal
+    portal = ${pkgs.xdg-desktop-portal}/libexec/xdg-desktop-portal
 
     # Fix for GTK apps slow startup
     0_environment = dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XAUTHORITY
