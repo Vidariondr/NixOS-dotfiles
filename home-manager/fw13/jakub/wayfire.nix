@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   home.file.".config/wayfire.ini".text = ''
     # Input configuration ──────────────────────────────────────────────────────────
 
@@ -291,9 +295,5 @@
     toggle_menu = <super>
   '';
 
-  home.file.".config/wf-shell.ini".text = ''
-    [background]
-    image = /home/jakub/NixOS-dotfiles/core/home-manager/client/wallpapers/wallpaper2.jpg
-    fill_mode = stretch
-  '';
+  xdg.configFile."wf-shell.ini".source = config.lib.file.mkOutOfStoreSymlink "/home/jakub/NixOS-dotfiles/home-manager/fw13/jakub/wayfire/wf-shell.ini";
 }
