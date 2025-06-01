@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{
+{pkgs, ...}: {
   # GTK Themes
   gtk = {
     enable = true;
@@ -20,6 +19,10 @@
   # QT Themes
   qt = {
     enable = true;
+    style = {
+      name = "Dracula";
+      package = pkgs.dracula-qt5-theme;
+    };
     # QT attempts to blend in with the look and feel of GTK-based DEs
     platformTheme.name = "gtk";
   };
