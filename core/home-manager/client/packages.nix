@@ -11,16 +11,25 @@
     pkgs.element-desktop
     # Archive manager
     pkgs.file-roller
-    pkgs.mpv # Video player
-    pkgs.floorp # Firefox-based browser
-
-    pkgs.feishin # Music player
-    pkgs.pavucontrol # Audio control
-    pkgs.rofi-wayland # App launcher
-    pkgs.xfce.mousepad # GUI text editor
-    pkgs.playerctl # CLI utility for controlling media players that implement MPRIS
-    pkgs.nwg-bar # Restart/shutdown app
-    pkgs.localsend # Locally send files to over devices
-    pkgs.nomacs # Image viewer
+    # Video player
+    pkgs.mpv
+    # Firefox-based browser
+    pkgs.floorp
+    # Music player
+    pkgs.feishin
+    # Audio control
+    pkgs.pavucontrol
+    # App launcher
+    pkgs.rofi-wayland
+    # GUI text editor
+    pkgs.xfce.mousepad
+    # CLI utility for controlling media players that implement MPRIS
+    pkgs.playerctl
+    # Restart/shutdown app
+    pkgs.nwg-bar
+    # Locally send files to over devices
+    pkgs.localsend
+    # Image viewer
+    pkgs.nomacs
   ];
 }
