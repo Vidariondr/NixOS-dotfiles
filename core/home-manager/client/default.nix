@@ -5,7 +5,6 @@
     ./gtk_qt.nix
     ./home-manager-options.nix
     ./kitty.nix
-    ./nwg-bar.nix
     ./packages.nix
     ./swaync.nix
     ./symlinks.nix
