@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     waybar-mpris
     font-awesome
@@ -20,8 +19,8 @@
         margin-right = 0;
         margin-bottom = 0;
         height = 25;
-        modules-left = [ "systemd-failed-units" "mpris" ];
-        modules-center = [ "wlr/taskbar" ];
+        modules-left = ["systemd-failed-units" "mpris"];
+        modules-center = ["wlr/taskbar"];
         modules-right = [
           "tray"
           "cpu"
@@ -30,8 +29,9 @@
           "temperature#gpu"
           "wireplumber"
           "clock"
+          "custom/notification"
         ];
-        
+
         "systemd-failed-units" = {
           format = "✗ {nr_failed}";
           format-ok = "✓";
@@ -40,55 +40,55 @@
           hide-on-ok = false;
         };
 
-	"mpris" = {
-	  format-playing = "{player_icon} {dynamic}";
-	  format-paused = "{status_icon} {dynamic}";
+        "mpris" = {
+          format-playing = "{player_icon} {dynamic}";
+          format-paused = "{status_icon} {dynamic}";
           format-stopped = "Nothing playing...";
-	  dynamic-len = 30;
+          dynamic-len = 30;
           interval = 1;
-	  player-icons = {
-		default = "⏸";
-	  };
-	  status-icons = {
-		paused = "▶";
-	  };
-	  tooltip = false;	
-	};
+          player-icons = {
+            default = "⏸";
+          };
+          status-icons = {
+            paused = "▶";
+          };
+          tooltip = false;
+        };
 
         "wlr/taskbar" = {
           all-outputs = true;
           tooltip = false;
           on-click = "minimize-raise";
         };
- 
-        tray = { spacing = 16; };
 
-	"cpu" = {
-	  format = " {usage}%";
-	  tooltip = false;
-	  on-click = "kitty btop";
-	};
+        tray = {spacing = 16;};
 
-	"memory" = {
-	  format = " {}%";
-	  on-click = "kitty btop";
-	};
+        "cpu" = {
+          format = " {usage}%";
+          tooltip = false;
+          on-click = "kitty btop";
+        };
 
-	"temperature#cpu" = {
-	  hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";	
+        "memory" = {
+          format = " {}%";
+          on-click = "kitty btop";
+        };
+
+        "temperature#cpu" = {
+          hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
           format = "{icon} {temperatureC}°C";
           format-icons = ["" ""];
-	  tooltip = false;
-	  on-click = "kitty btop";
-	};
+          tooltip = false;
+          on-click = "kitty btop";
+        };
 
-	"temperature#gpu" = {
-	  hwmon-path = "/sys/class/drm/card1/device/hwmon/hwmon0/temp1_input";
+        "temperature#gpu" = {
+          hwmon-path = "/sys/class/drm/card1/device/hwmon/hwmon0/temp1_input";
           format = "{icon} {temperatureC}°C";
           format-icons = ["" "" ""];
-	  tooltip = false;
-	  on-click = "kitty nvtop";
-	};
+          tooltip = false;
+          on-click = "kitty nvtop";
+        };
 
         clock = {
           format = "󰥔  {:%I:%M %p}";
@@ -114,9 +114,30 @@
           on-click-right = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 45%";
           scroll-step = 1;
         };
+
+        "custom/notification" = {
+          tooltip = false;
+          format = "{} {icon}";
+          format-icons = {
+            notification = "<span foreground='red'><sup></sup></span>";
+            none = "";
+            dnd-notification = "<span foreground='red'><sup></sup></span>";
+            dnd-none = "";
+            inhibited-notification = "<span foreground='red'><sup></sup></span>";
+            inhibited-none = "";
+            dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>";
+            dnd-inhibited-none = "";
+          };
+          return-type = "json";
+          exec-if = "which swaync-client";
+          exec = "swaync-client -swb";
+          on-click = "swaync-client -t -sw";
+          on-click-right = "swaync-client -d -sw";
+          escape = true;
+        };
       };
     };
-    
+
     style = ''
       * {
         border: none;
@@ -126,7 +147,7 @@
         color: #EAF0F5;
         font-weight: 700;
       }
-      
+
       window#waybar {
         background-color: #0B0B0B;
         transition-property: background-color;
@@ -158,6 +179,7 @@
       #temperature.gpu,
       #memory,
       #clock,
+      #custom-notification,
       #tray {
         border-radius: 0px;
         margin: 0px 0px;
