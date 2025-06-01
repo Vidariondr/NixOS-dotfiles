@@ -1,11 +1,9 @@
-{ pkgs, ... }:
-
-let
+{...}: let
   font = "JetBriansMono Nerd Font";
-in
-{
+in {
   programs.kitty = {
     enable = true;
+    enableGitIntegration = true;
     settings = {
       background_opacity = "0.7";
       window_padding_width = 4;
@@ -22,11 +20,11 @@ in
       # Black
       color0 = "#21222c";
       color8 = "#6272a4";
-     
+
       # Red
       color1 = "#ff5555";
       color9 = "#ff6e6e";
-       
+
       # Green
       color2 = "#50fa7b";
       color10 = "#69ff94";
