@@ -16,13 +16,13 @@
 
     [output:DP-1]
     mode = 1920x1080@60000
-    position = 0,0
+    position = 1920,0
     transform = normal
     scale = 1.000000
 
     [output:DP-3]
     mode = 1920x1080@60000
-    position = -1920,75
+    position = 0,0
     transform = normal
     scale = 1.000000
 
