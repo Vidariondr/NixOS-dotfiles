@@ -31,5 +31,7 @@
     pkgs.localsend
     # Image viewer
     pkgs.nomacs
+    # 3D modelling
+    pkgs.blender
   ];
 }
