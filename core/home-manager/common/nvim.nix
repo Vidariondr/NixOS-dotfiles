@@ -18,14 +18,15 @@
       hideSearchHighlight = true;
       languages = {
         enableFormat = true;
-        enableLSP = true;
         enableTreesitter = true;
         bash.enable = true;
         css.enable = true;
+        css.format.type = "prettierd";
         html.enable = true;
         nix.enable = true;
         markdown.enable = true;
         python.enable = true;
+        ts.format.type = "prettierd";
       };
       lsp = {
         enable = true;
