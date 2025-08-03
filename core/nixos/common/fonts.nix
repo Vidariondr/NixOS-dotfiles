@@ -4,5 +4,6 @@
     nerd-fonts.jetbrains-mono
     fira-code
     jetbrains-mono
+    roboto
   ];
 }
