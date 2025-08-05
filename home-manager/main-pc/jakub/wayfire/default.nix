@@ -153,6 +153,9 @@
     binding_copyq = <super> KEY_V
     command_copyq = copyq toggle
 
+    binding_gsr = <super> KEY_R
+    command_gsr = killall -SIGUSR1 gpu-screen-recorder
+
     # Windows ──────────────────────────────────────────────────────────────────────
 
     # Actions related to window management functionalities.
