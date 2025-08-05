@@ -154,7 +154,7 @@
     command_copyq = copyq toggle
 
     binding_gsr = <super> KEY_R
-    command_gsr = killall -SIGUSR1 gpu-screen-recorder
+    command_gsr = killall -SIGUSR1 gpu-screen-recorder && notify-send "Replay saved"
 
     # Windows ──────────────────────────────────────────────────────────────────────
 
