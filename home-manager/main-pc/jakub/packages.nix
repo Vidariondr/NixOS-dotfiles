@@ -13,7 +13,5 @@
     pkgs.freecad
     # Arduino IDE
     pkgs.arduino-ide
-    # 3D Slicer
-    pkgs.orca-slicer
   ];
 }

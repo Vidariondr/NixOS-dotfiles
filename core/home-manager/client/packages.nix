@@ -33,5 +33,7 @@
     pkgs.nomacs
     # 3D modelling
     pkgs.blender
+    # 3D Slicer
+    pkgs.orca-slicer
   ];
 }
