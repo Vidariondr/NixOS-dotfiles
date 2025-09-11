@@ -35,5 +35,9 @@
     pkgs.blender
     # 3D Slicer
     pkgs.orca-slicer
+    # 3D Slicer
+    pkgs.prusa-slicer
+    # 3D CAD
+    pkgs.freecad
   ];
 }
