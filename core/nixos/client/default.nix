@@ -11,5 +11,6 @@
     ./sddm.nix
     ./thunar.nix
     ./wayfire.nix
+    ../../../optional/nixos/steam
   ];
 }
