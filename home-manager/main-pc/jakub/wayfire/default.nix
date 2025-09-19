@@ -15,14 +15,14 @@
     # Output configuration ─────────────────────────────────────────────────────────
 
     [output:DP-1]
-    mode = 1920x1080@60000
-    position = 1920,0
+    mode = 2560x1440@180
+    position = 0,0
     transform = normal
     scale = 1.000000
 
     [output:DP-3]
-    mode = 1920x1080@60000
-    position = 0,0
+    mode = 2560x1440@180
+    position = 2560,0
     transform = normal
     scale = 1.000000
 
