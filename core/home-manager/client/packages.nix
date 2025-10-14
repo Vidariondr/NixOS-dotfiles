@@ -35,5 +35,7 @@
     pkgs.blender
     # Code editor
     pkgs.vscodium-fhs
+    # Notes app
+    pkgs.siyuan
   ];
 }
