@@ -33,5 +33,7 @@
     pkgs.nomacs
     # 3D modelling
     pkgs.blender
+    # Code editor
+    pkgs.vscodium-fhs
   ];
 }
