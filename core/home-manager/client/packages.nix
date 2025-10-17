@@ -37,5 +37,7 @@
     pkgs.vscodium-fhs
     # Notes app
     pkgs.siyuan
+    # Dev environment
+    pkgs.devenv
   ];
 }
