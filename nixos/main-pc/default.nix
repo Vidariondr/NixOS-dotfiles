@@ -3,7 +3,6 @@
     ./hardware-configuration.nix
     ../../core/nixos/common
     ../../core/nixos/client
-    ../../optional/nixos/steam
     ../../optional/nixos/qemu
     ../../optional/nixos/docker
   ];

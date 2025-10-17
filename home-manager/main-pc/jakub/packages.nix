@@ -9,11 +9,7 @@
     pkgs.vesktop
     # Movies/tv-show player
     pkgs.jellyfin-media-player
-    # 3D CAD
-    pkgs.freecad
     # Arduino IDE
     pkgs.arduino-ide
-    # 3D Slicer
-    pkgs.orca-slicer
   ];
 }

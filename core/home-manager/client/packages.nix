@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
   home.packages = [
     # Wayland clipboard support
     pkgs.wl-clipboard
@@ -39,5 +43,11 @@
     pkgs.siyuan
     # Dev environment
     pkgs.devenv
+    # 3D Slicer
+    pkgs.orca-slicer
+    # 3D Slicer
+    pkgs-unstable.prusa-slicer
+    # 3D CAD
+    pkgs.freecad
   ];
 }

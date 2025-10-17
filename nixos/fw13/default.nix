@@ -3,6 +3,7 @@
     ./hardware-configuration.nix
     ../../core/nixos/common
     ../../core/nixos/client
+    ../../optional/nixos/qemu
   ];
 
   # Enable touchpad support (enabled default in most desktopManager).
