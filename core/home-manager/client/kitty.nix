@@ -5,7 +5,6 @@ in {
     enable = true;
     enableGitIntegration = true;
     settings = {
-      background_opacity = "0.7";
       window_padding_width = 4;
 
       foreground = "#f8f8f2";
