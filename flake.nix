@@ -63,7 +63,7 @@
       ];
     };
 
-    nixosConfigurations.nixos_server = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixosserver = nixpkgs.lib.nixosSystem {
       # System variable indicating the system type
       system = "x86_64-linux";
 
