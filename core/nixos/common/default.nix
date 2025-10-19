@@ -4,7 +4,6 @@
     ./kernel.nix
     ./locale.nix
     ./networking.nix
-    ./networking-server-domain.nix
     ./nix-options.nix
     ./packages.nix
     ./ssh.nix
