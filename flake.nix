@@ -62,5 +62,21 @@
         ./home-manager/fw13
       ];
     };
+
+    nixosConfigurations.nixos_server = nixpkgs.lib.nixosSystem {
+      # System variable indicating the system type
+      system = "x86_64-linux";
+
+      # Passing variables to other modules
+      specialArgs = {inherit inputs nixpkgs-unstable nvf;};
+
+      modules = [
+        # Main configuration.nix module
+        ./nixos/nixos-server
+
+        # Home-manager module
+        ./home-manager/nixos-server
+      ];
+    };
   };
 }
