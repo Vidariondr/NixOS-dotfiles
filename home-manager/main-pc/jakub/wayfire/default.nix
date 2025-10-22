@@ -105,6 +105,9 @@
     # CopyQ
     copyq = copyq
 
+    # NetworkManager applet wifi icon
+    nmapplet = nm-applet
+
     # Screensharing
     0_0 = systemctl --user import-environment
     xdg = sleep 1 && (XDG_SESSION_TYPE=wayland XDG_CURRENT_DESKTOP=sway ${pkgs.xdg-desktop-portal}/libexec/xdg-desktop-portal --replace & ${pkgs.xdg-desktop-portal-wlr}/libexec/xdg-desktop-portal-wlr)
