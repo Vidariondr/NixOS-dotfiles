@@ -8,7 +8,6 @@
     pkgs.vesktop
     # Movies/tv-show player
     pkgs.jellyfin-media-player
-    pkgs.networkmanagerapplet
     pkgs.brightnessctl
     pkgs.swaylock
     pkgs.swayidle

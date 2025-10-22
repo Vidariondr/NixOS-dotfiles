@@ -49,5 +49,7 @@
     pkgs-unstable.prusa-slicer
     # 3D CAD
     pkgs.freecad
+    # NetworkManager GUI
+    pkgs.networkmanagerapplet
   ];
 }
