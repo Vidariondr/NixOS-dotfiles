@@ -25,6 +25,24 @@
     };
   };
 
+  systemd.timers."kopia-estimate" = {
+    wantedBy = ["timers.target"];
+    timerConfig = {
+      OnCalendar = "*-*-* 21:30:00";
+      Persistent = true;
+      Unit = "kopia-estimate.service";
+    };
+  };
+
+  systemd.services."kopia-estimate" = {
+    path = with pkgs; [bash kopia curl bash busybox];
+    serviceConfig = {
+      Type = "oneshot";
+      User = "root";
+      ExecStart = "/home/jakub/docker/scripts/kopia-estimate.sh";
+    };
+  };
+
   # Define hostname
   networking.hostName = "nixos_server";
 
