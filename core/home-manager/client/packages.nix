@@ -41,8 +41,6 @@
     pkgs.vscodium-fhs
     # Notes app
     pkgs.siyuan
-    # Dev environment
-    pkgs.devenv
     # 3D Slicer
     pkgs.orca-slicer
     # 3D Slicer
