@@ -49,5 +49,7 @@
     pkgs.freecad
     # NetworkManager GUI
     pkgs.networkmanagerapplet
+    # Discord client
+    pkgs.discord
   ];
 }

@@ -4,8 +4,6 @@
     pkgs.wineWowPackages.stable
     pkgs.winetricks
     pkgs.lutris
-    # Discord client
-    pkgs.vesktop
     # Movies/tv-show player
     pkgs.jellyfin-media-player
     pkgs.brightnessctl

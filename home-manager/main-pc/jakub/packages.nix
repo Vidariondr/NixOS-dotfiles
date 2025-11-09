@@ -5,8 +5,6 @@
     pkgs.winetricks
     # 3D Printing
     pkgs.openscad
-    # Discord client
-    pkgs.vesktop
     # Movies/tv-show player
     pkgs.jellyfin-media-player
     # Arduino IDE
