@@ -2,7 +2,6 @@
   imports = [
     ./audio.nix
     ./easyeffects.nix
-    ./gpu_screen_recorder.nix
     ./networking-localsend.nix
     ./networking-server-domain.nix
     ./office.nix

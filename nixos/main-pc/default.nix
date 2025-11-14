@@ -5,6 +5,7 @@
     ../../core/nixos/client
     ../../optional/nixos/qemu
     ../../optional/nixos/docker
+    ../../optional/nixos/modules/gpu-screen-recorder
   ];
 
   services.openssh = {
@@ -14,6 +15,11 @@
         publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGBY2OaKF3WGMqZ7LYozacmhkBdWq8CPa7NCvYt5DlmD";
       };
     };
+  };
+
+  services.gpu-screen-recorder = {
+    enable = true;
+    replayMode = true;
   };
 
   # Remove error messages from logs happening because of unused modules
