@@ -22,6 +22,8 @@
     replayMode = true;
   };
 
+  systemd.user.services.gpu-screen-recorder.enable = true;
+
   # Remove error messages from logs happening because of unused modules
   boot.blacklistedKernelModules = ["ucsi_ccg"];
 
