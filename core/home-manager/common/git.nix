@@ -6,8 +6,14 @@
   programs.git = {
     enable = true;
 
-    userName = "J";
+    userName = "Jakub";
     userEmail = "204088010+Vidariondr@users.noreply.github.com";
+
+    signing = {
+      format = "ssh";
+      key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA7NeV9c7rCV22eYcLBXr9LWCt0XPfjQ3OavIXLSouPk";
+      signByDefault = true;
+    };
 
     extraConfig = {
       core.editor = "vim";
