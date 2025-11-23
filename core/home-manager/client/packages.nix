@@ -19,8 +19,6 @@
     pkgs.mpv
     # Firefox-based browser
     pkgs.floorp
-    # Music player
-    pkgs.feishin
     # Audio control
     pkgs.pavucontrol
     # App launcher
