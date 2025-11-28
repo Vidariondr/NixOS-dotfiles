@@ -146,7 +146,7 @@
     command_browser = floorp
 
     binding_discord = <super> KEY_D
-    command_discord = discord
+    command_discord = vesktop
 
     binding_previous = <super> KEY_Z
     command_previous = playerctl previous

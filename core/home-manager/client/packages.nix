@@ -48,6 +48,6 @@
     # NetworkManager GUI
     pkgs.networkmanagerapplet
     # Discord client
-    pkgs.discord
+    pkgs.vesktop
   ];
 }
