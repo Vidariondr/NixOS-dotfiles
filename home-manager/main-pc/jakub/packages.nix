@@ -9,5 +9,7 @@
     pkgs.jellyfin-media-player
     # Arduino IDE
     pkgs.arduino-ide
+    # Image editor
+    pkgs.gimp3
   ];
 }
