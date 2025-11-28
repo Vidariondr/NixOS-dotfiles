@@ -2,6 +2,7 @@
   imports = [
     ./audio.nix
     ./easyeffects.nix
+    ./nemo.nix
     ./networking-localsend.nix
     ./networking-server-domain.nix
     ./office.nix
@@ -9,7 +10,6 @@
     ./packages.nix
     ./portals.nix
     ./sddm.nix
-    ./thunar.nix
     ./wayfire.nix
     ../../../optional/nixos/steam
   ];

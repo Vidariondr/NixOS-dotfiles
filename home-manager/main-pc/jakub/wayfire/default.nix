@@ -135,7 +135,7 @@
     command_screenshot_interactive = slurp | grim -g - /home/jakub/Screenshots/$(date '+%F_%T').jpg
 
     binding_filemanager = <super> KEY_T
-    command_filemanager = thunar
+    command_filemanager = nemo
 
     binding_browser = <super> KEY_B
     command_browser = floorp
