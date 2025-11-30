@@ -22,6 +22,8 @@
     replayMode = true;
   };
 
+  networking.networkmanager.insertNameservers = ["192.168.18.26" "9.9.9.9" "1.1.1.1"];
+
   systemd.user.services.gpu-screen-recorder.enable = true;
 
   # Remove error messages from logs happening because of unused modules
