@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }: {
   home.packages = with pkgs; [
@@ -11,7 +12,7 @@
     enable = true;
 
     # Where the config files will be located
-    dotDir = ".config/zsh";
+    dotDir = "${config.home.homeDirectory}/.config/zsh";
 
     # Autosuggestions as you type/predictive typing
     autosuggestion = {

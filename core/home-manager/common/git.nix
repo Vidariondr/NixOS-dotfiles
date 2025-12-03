@@ -6,20 +6,21 @@
   programs.git = {
     enable = true;
 
-    userName = "Jakub";
-    userEmail = "204088010+Vidariondr@users.noreply.github.com";
-
-    signing = {
-      format = "ssh";
-      signByDefault = true;
-    };
-
-    extraConfig = {
+    settings = {
+      user = {
+        email = "Jakub";
+        name = "204088010+Vidariondr@users.noreply.github.com";
+      };
       core.editor = "vim";
       init.defaultBranch = "main";
       core.autocrlf = "input"; # changes Windows-style line endings to Unix-style (CRLF to LF) when saving the code to the repo, but doesn't change it when pulling
       credential.credentialStore = "cache";
       advice.addIgnoredFile = "false";
+    };
+
+    signing = {
+      format = "ssh";
+      signByDefault = true;
     };
   };
 }

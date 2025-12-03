@@ -6,7 +6,7 @@
     # 3D Printing
     pkgs.openscad
     # Movies/tv-show player
-    pkgs.jellyfin-media-player
+    # pkgs.jellyfin-media-player
     # Arduino IDE
     pkgs.arduino-ide
     # Image editor

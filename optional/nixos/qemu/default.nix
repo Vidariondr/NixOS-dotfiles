@@ -7,8 +7,6 @@
 
   # This enables to create and manage VMs
   virtualisation.libvirtd.enable = true;
-  # Enables UEFI instead of BIOS in the VMs
-  virtualisation.libvirtd.qemu.ovmf.enable = true;
 
   environment.systemPackages = with pkgs; [
     qemu

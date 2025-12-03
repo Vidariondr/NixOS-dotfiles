@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     libreoffice-qt # Office suite
     # Spelling-checker packages
@@ -11,6 +14,6 @@
 
   fonts.packages = with pkgs; [
     corefonts
-    vistafonts
+    vista-fonts
   ];
 }

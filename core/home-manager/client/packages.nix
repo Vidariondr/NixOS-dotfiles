@@ -18,11 +18,11 @@
     # Video player
     pkgs.mpv
     # Firefox-based browser
-    pkgs.floorp
+    pkgs.floorp-bin
     # Audio control
     pkgs.pavucontrol
     # App launcher
-    pkgs.rofi-wayland
+    pkgs.rofi
     # GUI text editor
     pkgs.xfce.mousepad
     # CLI utility for controlling media players that implement MPRIS
