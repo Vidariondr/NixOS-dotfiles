@@ -8,8 +8,9 @@
 
     [input]
     xkb_layout = us,pl,gb
-    xkb_options = grp:win_space_toggle
+    xkb_options = grp:lctrl_lshift_toggle
 
+    mouse_accel_profile = none
     cursor_theme = phinger-cursors-dark
 
     # Output configuration ─────────────────────────────────────────────────────────
@@ -32,7 +33,7 @@
 
     # List of plugins to be enabled.
     # See the Configuration document for a complete list.
-    plugins = alpha animate autostart command decoration expo fast-switcher grid gtk-shell move oswitch place resize switcher vswitch wayfire-shell window-rules wm-actions zoom foreign-toplevel xdg-activation
+    plugins = alpha animate autostart command decoration expo fast-switcher grid gtk-shell move place resize scale vswitch wayfire-shell window-rules wm-actions zoom foreign-toplevel xdg-activation
 
     # Close focused window.
     close_top_view = <super> <shift> KEY_C | <alt> KEY_F4
@@ -46,6 +47,9 @@
 
     # Turn on X11 for other windows
     xwayland = true
+
+    # Focus action will work even when modifiers are pressed.
+    focus_button_with_modifiers = true
 
     # Mouse bindings ───────────────────────────────────────────────────────────────
 
@@ -125,7 +129,7 @@
     # https://hg.sr.ht/~scoopta/wofi
     # Note: Add mode=run or mode=drun to ~/.config/wofi/config.
     # You can also specify the mode with --show option.
-    binding_launcher = <ctrl> KEY_SPACE
+    binding_launcher = <super> KEY_SPACE
     command_launcher = rofi -show combi -combi-modes "window,drun" -modes combi
 
     # Screenshots
@@ -165,10 +169,10 @@
     #
     # Example configuration:
     #
-    # [wm-actions]
+    [wm-actions]
     # toggle_fullscreen = <super> KEY_F
-    # toggle_always_on_top = <super> KEY_X
-    # toggle_sticky = <super> <shift> KEY_X
+    toggle_always_on_top = <super> KEY_S
+    toggle_sticky = <super> <shift> KEY_S
 
     # Position the windows in certain regions of the output.
     [grid]
@@ -189,11 +193,6 @@
     # Restore default.
     restore = <super> KEY_DOWN | <super> KEY_KP0
 
-    # Change active window with an animation.
-    [switcher]
-    next_view = <alt> KEY_TAB
-    prev_view = <alt> <shift> KEY_TAB
-
     # Simple active window switcher.
     [fast-switcher]
     activate = <alt> KEY_ESC
@@ -208,6 +207,16 @@
     # use lswt command to find the app_id. Can be with nix-shell -p lswt. Use lswt -w
     [window-rules]
     copyq_size = on created if app_id is "com.github.hluk.copyq" then resize 500 500
+
+    [scale]
+    toggle = <super> KEY_TAB
+    duration = 200
+    allow_zoom = true
+    middle_click_close = true
+    include_minimized = true
+    close_on_new_view = true
+    outer_margin = 100
+    title_position = top
 
     # Workspaces ───────────────────────────────────────────────────────────────────
 
@@ -253,13 +262,6 @@
     select_workspace_9 = KEY_9
 
     # Outputs ──────────────────────────────────────────────────────────────────────
-
-    # Change focused output.
-    [oswitch]
-    # Switch to the next output.
-    next_output = <super> KEY_O
-    # Same with the window.
-    next_output_with_win = <super> <shift> KEY_O
 
     # Invert the colors of the whole output.
     # [invert]
