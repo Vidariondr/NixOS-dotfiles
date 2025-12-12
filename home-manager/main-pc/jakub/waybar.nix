@@ -56,8 +56,7 @@
         };
 
         "wlr/taskbar" = {
-          all-outputs = true;
-          tooltip = false;
+          tooltip = true;
           on-click = "minimize-raise";
         };
 
