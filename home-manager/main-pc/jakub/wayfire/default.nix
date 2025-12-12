@@ -11,6 +11,7 @@
     xkb_options = grp:lctrl_lshift_toggle
 
     mouse_accel_profile = none
+    mouse_cursor_speed = -1
     cursor_theme = phinger-cursors-dark
 
     # Output configuration ─────────────────────────────────────────────────────────
