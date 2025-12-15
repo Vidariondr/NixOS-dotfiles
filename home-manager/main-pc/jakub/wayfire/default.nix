@@ -8,7 +8,7 @@
 
     [input]
     xkb_layout = us,pl,gb
-    xkb_options = grp:lctrl_lshift_toggle
+    xkb_options = grp:ctrl_alt_toggle
 
     mouse_accel_profile = none
     mouse_cursor_speed = -1
