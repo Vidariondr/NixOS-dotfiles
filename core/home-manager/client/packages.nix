@@ -49,5 +49,6 @@
     pkgs.networkmanagerapplet
     # Discord client
     pkgs.vesktop
+    pkgs.anydesk # Remote access
   ];
 }
