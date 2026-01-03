@@ -5,6 +5,9 @@
       autocomplete.nvim-cmp.enable = true;
       autopairs.nvim-autopairs.enable = true;
       binds.whichKey.enable = true;
+      diagnostics = {
+        enable = true;
+      };
       filetree.neo-tree = {
         enable = true;
         setupOpts = {
@@ -46,7 +49,6 @@
         autoindent = true;
         mouse = "cv";
       };
-      spellcheck.enable = true;
       statusline = {
         lualine = {
           enable = true;
