@@ -5,6 +5,9 @@
       autocomplete.nvim-cmp.enable = true;
       autopairs.nvim-autopairs.enable = true;
       binds.whichKey.enable = true;
+      diagnostics = {
+        enable = true;
+      };
       filetree.neo-tree = {
         enable = true;
         setupOpts = {
@@ -21,12 +24,12 @@
         enableTreesitter = true;
         bash.enable = true;
         css.enable = true;
-        css.format.type = "prettierd";
+        css.format.type = ["prettierd"];
         html.enable = true;
         nix.enable = true;
         markdown.enable = true;
         python.enable = true;
-        ts.format.type = "prettierd";
+        ts.format.type = ["prettierd"];
       };
       lsp = {
         enable = true;
@@ -46,7 +49,6 @@
         autoindent = true;
         mouse = "cv";
       };
-      spellcheck.enable = true;
       statusline = {
         lualine = {
           enable = true;
