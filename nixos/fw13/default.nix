@@ -11,6 +11,8 @@
 
   programs.dconf.enable = true;
 
+  networking.firewall.checkReversePath = "loose";
+
   # BIOS updates
   services.fwupd.enable = true;
 
