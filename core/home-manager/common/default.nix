@@ -6,7 +6,6 @@
     ./nvim.nix
     ./packages.nix
     ./ranger.nix
-    ./syncthing.nix
     ./vim.nix
     ./zsh
   ];
