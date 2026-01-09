@@ -8,7 +8,7 @@
 
     [input]
     xkb_layout = us,pl,gb
-    xkb_options = grp:win_space_toggle
+    xkb_options = grp:ctrl_alt_toggle
 
     cursor_theme = phinger-cursors-dark
 
@@ -26,7 +26,7 @@
 
     # List of plugins to be enabled.
     # See the Configuration document for a complete list.
-    plugins = alpha animate autostart command decoration expo fast-switcher grid gtk-shell move oswitch place resize switcher vswitch wayfire-shell window-rules wm-actions zoom foreign-toplevel session-lock idle
+    plugins = alpha animate autostart command decoration expo fast-switcher grid gtk-shell move oswitch place resize switcher vswitch wayfire-shell window-rules wm-actions zoom foreign-toplevel session-lock idle scale
 
     # Close focused window.
     close_top_view = <super> <shift> KEY_C | <alt> KEY_F4
@@ -82,7 +82,7 @@
 
     # XDG desktop portal
     # Needed by some GTK applications
-    portal = /usr/libexec/xdg-desktop-portal
+    portal = ${pkgs.xdg-desktop-portal}/libexec/xdg-desktop-portal
 
     # Fix for GTK apps slow startup
     0_environment = dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XAUTHORITY
@@ -114,8 +114,8 @@
 
     # Idle
     [idle]
-    screensaver_timeout = 60
-    dpms_timeout = 90
+    screensaver_timeout = 180
+    dpms_timeout = 180
 
     # Applications ─────────────────────────────────────────────────────────────────
 
@@ -177,9 +177,9 @@
     command_volume_down = wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
 
     repeatable_binding_light_up = KEY_BRIGHTNESSUP
-    command_light_up = brightnessctl set +1
+    command_light_up = brightnessctl set +500
     repeatable_binding_light_down = KEY_BRIGHTNESSDOWN
-    command_light_down = brightnessctl set 1-
+    command_light_down = brightnessctl set 500-
 
     binding_lock = <super> <shift> KEY_ESC
     command_lock = swaylock -c 000000 -eKL --indicator-idle-visible
@@ -192,8 +192,8 @@
     #
     # [wm-actions]
     # toggle_fullscreen = <super> KEY_F
-    # toggle_always_on_top = <super> KEY_X
-    # toggle_sticky = <super> <shift> KEY_X
+    toggle_always_on_top = <super> KEY_S
+    toggle_sticky = <super> <shift> KEY_S
 
     # Position the windows in certain regions of the output.
     [grid]
@@ -214,11 +214,6 @@
     # Restore default.
     restore = <super> KEY_DOWN | <super> KEY_KP0
 
-    # Change active window with an animation.
-    [switcher]
-    next_view = <alt> KEY_TAB
-    prev_view = <alt> <shift> KEY_TAB
-
     # Simple active window switcher.
     [fast-switcher]
     activate = <alt> KEY_ESC
@@ -233,6 +228,16 @@
     # use lswt command to find the app_id. Can be with nix-shell -p lswt. Use lswt -w
     [window-rules]
     copyq_size = on created if app_id is "com.github.hluk.copyq" then resize 500 500
+
+    [scale]
+    toggle = <super> KEY_TAB
+    duration = 200
+    allow_zoom = true
+    middle_click_close = true
+    include_minimized = true
+    close_on_new_view = true
+    outer_margin = 100
+    title_position = top
 
     # Workspaces ───────────────────────────────────────────────────────────────────
 
@@ -279,13 +284,6 @@
 
     # Outputs ──────────────────────────────────────────────────────────────────────
 
-    # Change focused output.
-    [oswitch]
-    # Switch to the next output.
-    next_output = <super> KEY_O
-    # Same with the window.
-    next_output_with_win = <super> <shift> KEY_O
-
     # Invert the colors of the whole output.
     # [invert]
     # toggle = <super> KEY_I
@@ -293,6 +291,11 @@
     # Send toggle menu event.
     [wayfire-shell]
     toggle_menu = <super>
+
+    # Solve focusing issues
+    [xdg-activation]
+    check_surface = true
+    only_last_request = true
   '';
 
   xdg.configFile."wf-shell.ini".source = config.lib.file.mkOutOfStoreSymlink "/home/jakub/NixOS-dotfiles/home-manager/fw13/jakub/wayfire/wf-shell.ini";
