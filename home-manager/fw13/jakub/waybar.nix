@@ -25,9 +25,12 @@
           "tray"
           "cpu"
           "memory"
+          "temperature#cpu"
+          "temperature#gpu"
           "wireplumber"
           "battery"
           "clock"
+          "custom/notification"
         ];
 
         "battery" = {
@@ -76,6 +79,22 @@
           on-click = "kitty btop";
         };
 
+        "temperature#cpu" = {
+          hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
+          format = "{icon} {temperatureC}°C";
+          format-icons = ["" ""];
+          tooltip = false;
+          on-click = "kitty btop";
+        };
+
+        "temperature#gpu" = {
+          hwmon-path = "/sys/class/drm/card1/device/hwmon/hwmon0/temp1_input";
+          format = "{icon} {temperatureC}°C";
+          format-icons = ["" "" ""];
+          tooltip = false;
+          on-click = "kitty nvtop";
+        };
+
         clock = {
           format = "󰥔  {:%I:%M %p}";
           format-alt = "  {:%a, %d %b %Y}";
@@ -99,6 +118,27 @@
           on-click-middle = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           on-click-right = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 45%";
           scroll-step = 1;
+        };
+
+        "custom/notification" = {
+          tooltip = false;
+          format = "{} {icon}";
+          format-icons = {
+            notification = "<span foreground='red'><sup></sup></span>";
+            none = "";
+            dnd-notification = "<span foreground='red'><sup></sup></span>";
+            dnd-none = "";
+            inhibited-notification = "<span foreground='red'><sup></sup></span>";
+            inhibited-none = "";
+            dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>";
+            dnd-inhibited-none = "";
+          };
+          return-type = "json";
+          exec-if = "which swaync-client";
+          exec = "swaync-client -swb";
+          on-click = "swaync-client -t -sw";
+          on-click-right = "swaync-client -d -sw";
+          escape = true;
         };
       };
     };
@@ -140,9 +180,12 @@
       #mpris,
       #taskbar,
       #cpu,
+      #temperature.cpu,
+      #temperature.gpu,
       #memory,
       #clock,
       #battery,
+      #custom-notification,
       #tray {
         border-radius: 0px;
         margin: 0px 0px;
