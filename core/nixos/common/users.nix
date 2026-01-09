@@ -1,7 +1,6 @@
-{ config, ... }:
-{
+{config, ...}: {
   users.users.jakub = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "dialout" "docker" ];
+    extraGroups = ["wheel" "dialout" "docker" "wireshark"];
   };
 }
