@@ -7,7 +7,7 @@
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
     nvf.url = "github:notashelf/nvf?ref=v0.8";
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.3";
+      url = "github:nix-community/lanzaboote/v1.0.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
@@ -57,6 +57,9 @@
 
         # Framework specific hardware configuration
         nixos-hardware.nixosModules.framework-13-7040-amd
+
+        # Secure boot module
+        ./optional/nixos/secureboot
 
         # Home-manager module
         ./home-manager/fw13

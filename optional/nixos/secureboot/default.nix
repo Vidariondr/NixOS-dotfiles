@@ -1,6 +1,10 @@
-{ pkgs, lib, inputs, ... }:
 {
-  imports = [ inputs.lanzaboote.nixosModules.lanzaboote ];
+  pkgs,
+  lib,
+  inputs,
+  ...
+}: {
+  imports = [inputs.lanzaboote.nixosModules.lanzaboote];
 
   environment.systemPackages = [
     # For debugging and troubleshooting Secure Boot.
@@ -15,6 +19,6 @@
 
   boot.lanzaboote = {
     enable = true;
-    pkiBundle = "/etc/secureboot";
+    pkiBundle = "/var/lib/sbctl";
   };
 }
