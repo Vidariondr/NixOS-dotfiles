@@ -50,4 +50,11 @@
     pkgs.anydesk # Remote access
     pkgs.gnome-disk-utility # Formatting disks
   ];
+  programs.mangohud = {
+    enable = true;
+    enableSessionWide = true;
+    settings = {
+      full = true;
+    };
+  };
 }
