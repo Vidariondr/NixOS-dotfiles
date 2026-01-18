@@ -21,12 +21,14 @@
     position = 0,0
     transform = normal
     scale = 1.000000
+    vrr = true
 
     [output:DP-3]
     mode = 2560x1440@180
     position = 2560,0
     transform = normal
     scale = 1.000000
+    vrr = true
 
     # Core options ─────────────────────────────────────────────────────────────────
 
