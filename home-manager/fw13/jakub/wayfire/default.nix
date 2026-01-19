@@ -26,7 +26,7 @@
 
     # List of plugins to be enabled.
     # See the Configuration document for a complete list.
-    plugins = alpha animate autostart command decoration expo fast-switcher grid gtk-shell move oswitch place resize switcher vswitch wayfire-shell window-rules wm-actions zoom foreign-toplevel session-lock idle scale
+    plugins = alpha animate autostart command decoration expo fast-switcher grid gtk-shell move place resize scale vswitch wayfire-shell window-rules wm-actions zoom foreign-toplevel session-lock idle xdg-activation
 
     # Close focused window.
     close_top_view = <super> <shift> KEY_C | <alt> KEY_F4
@@ -40,6 +40,9 @@
 
     # Turn on X11 for other windows
     xwayland = true
+
+    # Focus action will work even when modifiers are pressed.
+    focus_button_with_modifiers = true
 
     # Mouse bindings ───────────────────────────────────────────────────────────────
 
@@ -190,7 +193,7 @@
     #
     # Example configuration:
     #
-    # [wm-actions]
+    [wm-actions]
     # toggle_fullscreen = <super> KEY_F
     toggle_always_on_top = <super> KEY_S
     toggle_sticky = <super> <shift> KEY_S
