@@ -133,7 +133,7 @@
     # https://hg.sr.ht/~scoopta/wofi
     # Note: Add mode=run or mode=drun to ~/.config/wofi/config.
     # You can also specify the mode with --show option.
-    binding_launcher = <ctrl> KEY_SPACE
+    binding_launcher = <super> KEY_SPACE
     command_launcher = rofi -show combi -combi-modes "window,drun" -modes combi
 
     # Screenshots
