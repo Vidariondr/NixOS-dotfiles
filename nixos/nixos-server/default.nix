@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
+    ./wgportal.nix
     ../../core/nixos/common
     ../../optional/nixos/docker
   ];
