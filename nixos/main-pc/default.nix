@@ -22,7 +22,7 @@
     replayMode = true;
   };
 
-  networking.networkmanager.insertNameservers = ["192.168.18.26" "9.9.9.9" "1.1.1.1"];
+  networking.networkmanager.insertNameservers = ["172.27.72.27" "9.9.9.9" "1.1.1.1"];
 
   systemd.user.services.gpu-screen-recorder.enable = true;
 
