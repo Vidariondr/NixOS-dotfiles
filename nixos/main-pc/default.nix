@@ -5,7 +5,6 @@
     ../../core/nixos/client
     ../../optional/nixos/qemu
     ../../optional/nixos/docker
-    ../../optional/nixos/modules/gpu-screen-recorder
   ];
 
   services.openssh = {
@@ -24,7 +23,6 @@
 
   networking.networkmanager.insertNameservers = ["172.27.72.27" "9.9.9.9" "1.1.1.1"];
 
-  systemd.user.services.gpu-screen-recorder.enable = true;
 
   # Remove error messages from logs happening because of unused modules
   boot.blacklistedKernelModules = ["ucsi_ccg"];
