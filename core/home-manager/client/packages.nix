@@ -6,9 +6,6 @@
   home.packages = [
     # Wayland clipboard support
     pkgs.wl-clipboard
-    # Screenshot tools grim and slurp
-    pkgs.grim
-    pkgs.slurp
     # Encryption, backup bitwarden and raivo
     pkgs.veracrypt
     # Matrix client
@@ -49,6 +46,7 @@
     pkgs.vesktop
     pkgs.anydesk # Remote access
     pkgs.gnome-disk-utility # Formatting disks
+    pkgs.swaybg # Wallpaper
   ];
   programs.mangohud = {
     enable = true;

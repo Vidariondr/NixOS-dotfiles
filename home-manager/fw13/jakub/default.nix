@@ -5,6 +5,5 @@
     ./git.nix
     ./packages.nix
     ./waybar.nix
-    ./wayfire
   ];
 }
