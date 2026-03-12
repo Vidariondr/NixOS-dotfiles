@@ -10,7 +10,7 @@
     ./packages.nix
     ./portals.nix
     ./sddm.nix
-    ./wayfire.nix
+    ./niri.nix
     ../../../optional/nixos/steam
   ];
 }

@@ -1,0 +1,27 @@
+include "common.kdl"
+
+input {
+    mouse {
+        accel-speed -1
+    }
+}
+
+output "DP-1" {
+    mode "2560x1440@180"
+    scale 1.0
+    transform "normal"
+    variable-refresh-rate
+}
+
+output "DP-3" {
+    mode "2560x1440@180"
+    scale 1.0
+    position x=2560 y=0
+    transform "normal"
+    variable-refresh-rate
+}
+
+spawn-sh-at-startup "swaybg -i /home/jakub/Pictures/wallpaper.jpg -m center"
+
+binds {
+}

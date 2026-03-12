@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   imports = [
     ./hardware-configuration.nix
     ../../core/nixos/common
@@ -9,13 +9,7 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
-  programs.wireshark.enable = true;
-  programs.wireshark.package = pkgs.wireshark;
-  programs.wireshark.dumpcap.enable = true;
-
   programs.dconf.enable = true;
-
-  networking.firewall.checkReversePath = "loose";
 
   # BIOS updates
   services.fwupd.enable = true;
