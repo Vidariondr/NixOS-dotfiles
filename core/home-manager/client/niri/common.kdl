@@ -1,8 +1,8 @@
 input {
     keyboard {
         xkb {
-            layout "us,pl.gb"
-            options "grp:ctrl_alt_toggle"
+            layout "us,pl,gb"
+            options "grp:lctrl_lalt_toggle"
         }
 
         numlock
