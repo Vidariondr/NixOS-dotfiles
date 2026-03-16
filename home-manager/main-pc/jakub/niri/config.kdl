@@ -24,4 +24,7 @@ output "DP-3" {
 spawn-sh-at-startup "swaybg -i /home/jakub/Pictures/wallpaper.jpg -m center"
 
 binds {
+    Mod+X allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    Mod+C allow-when-locked=true { spawn-sh "playerctl previous"; }
+    Mod+Z allow-when-locked=true { spawn-sh "playerctl next"; }
 }
