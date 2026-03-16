@@ -16,11 +16,6 @@
     };
   };
 
-  services.gpu-screen-recorder = {
-    enable = true;
-    replayMode = true;
-  };
-
   networking.networkmanager.insertNameservers = ["9.9.9.9" "1.1.1.1"];
 
   # Remove error messages from logs happening because of unused modules
