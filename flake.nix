@@ -2,6 +2,7 @@
   description = "System flake";
 
   inputs = {
+    affinity-nix.url = "github:mrshmllow/affinity-nix";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
@@ -17,6 +18,7 @@
   };
 
   outputs = {
+    affinity-nix,
     nixpkgs,
     nixpkgs-unstable,
     nixos-hardware,
@@ -30,7 +32,7 @@
       system = "x86_64-linux";
 
       # Passing variables to other modules
-      specialArgs = {inherit inputs nixpkgs-unstable nvf;};
+      specialArgs = {inherit affinity-nix inputs nixpkgs-unstable nvf;};
 
       modules = [
         # Main configuration.nix module

@@ -1,4 +1,4 @@
-{...}: {
+{affinity-nix, ...}: {
   imports = [
     ./hardware-configuration.nix
     ../../core/nixos/common
@@ -15,6 +15,8 @@
       };
     };
   };
+
+  environment.systemPackages = [affinity-nix.packages.x86_64-linux.v3];
 
   networking.networkmanager.insertNameservers = ["9.9.9.9" "1.1.1.1"];
 
