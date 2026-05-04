@@ -63,6 +63,7 @@ binds {
     Mod+T repeat=false { spawn "nemo"; }
 
     Mod+E repeat=false { toggle-overview; }
+    Mod+F repeat=false { toggle-window-floating; }
 
     Mod+Shift+C repeat=false { close-window; }
 
