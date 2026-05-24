@@ -59,7 +59,7 @@ binds {
     Super+Shift+L repeat=false hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+L repeat=false { spawn "nwg-bar"; }
     Mod+V repeat=false { spawn-sh "copyq toggle"; }
-    Mod+D repeat=false { spawn "vesktop"; }
+    Mod+D repeat=false { spawn "discord"; }
     Mod+T repeat=false { spawn "nemo"; }
 
     Mod+E repeat=false { toggle-overview; }
