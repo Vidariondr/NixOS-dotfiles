@@ -8,6 +8,7 @@
       enable = true;
       createDirectories = true;
       download = "${config.home.homeDirectory}/Downloads";
+      setSessionVariables = true;
     };
   };
 }

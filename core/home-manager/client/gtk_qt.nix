@@ -14,6 +14,7 @@
       name = "Dracula";
       package = pkgs.dracula-icon-theme;
     };
+    gtk4.theme = null;
   };
 
   # QT Themes

@@ -21,7 +21,7 @@
     # App launcher
     pkgs.rofi
     # GUI text editor
-    pkgs.xfce.mousepad
+    pkgs.mousepad
     # CLI utility for controlling media players that implement MPRIS
     pkgs.playerctl
     # Restart/shutdown app

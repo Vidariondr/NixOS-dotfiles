@@ -2,7 +2,7 @@
   home.packages = [
     # Wine
     pkgs.discord
-    pkgs.wineWowPackages.stable
+    pkgs.wineWow64Packages.stable
     pkgs.winetricks
     # 3D Printing
     pkgs.openscad
