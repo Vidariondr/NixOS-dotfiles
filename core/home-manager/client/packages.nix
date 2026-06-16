@@ -46,6 +46,9 @@
     pkgs.anydesk # Remote access
     pkgs.gnome-disk-utility # Formatting disks
     pkgs.swaybg # Wallpaper
+    pkgs.dracula-qt5-theme
+    pkgs.dracula-icon-theme
+    pkgs.dracula-theme
   ];
   programs.mangohud = {
     enable = true;

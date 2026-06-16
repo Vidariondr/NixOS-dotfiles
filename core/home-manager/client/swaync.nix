@@ -36,7 +36,7 @@
       timout-critical = 0;
       fit-to-screen = false;
       keyboard-shortucts = false;
-      image-visibility = "when available";
+      image-visibility = "when-available";
       transition-time = 200;
       hide-on-clear = true;
       hide-on-action = true;
