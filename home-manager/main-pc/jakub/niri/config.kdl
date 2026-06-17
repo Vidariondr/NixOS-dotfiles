@@ -21,7 +21,7 @@ output "DP-3" {
     variable-refresh-rate
 }
 
-spawn-sh-at-startup "swaybg -i /home/jakub/Pictures/wallpaper.jpg -m center"
+spawn-sh-at-startup "swaybg -i /home/jakub/Pictures/wallpaper.jpg -m fit"
 
 binds {
     Mod+X allow-when-locked=true { spawn-sh "playerctl play-pause"; }

@@ -30,7 +30,6 @@ environment {
 }
 
 spawn-at-startup "waybar"
-//spawn-at-startup "swaync"
 spawn-at-startup "gammastep"
 spawn-at-startup "lxqt-policykit-agent"
 spawn-at-startup "copyq"
