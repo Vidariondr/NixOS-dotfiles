@@ -8,8 +8,8 @@
 
     settings = {
       user = {
-        email = "Jakub";
-        name = "204088010+Vidariondr@users.noreply.github.com";
+        email = "204088010+Vidariondr@users.noreply.github.com";
+        name = "Vidariondr";
       };
       core.editor = "vim";
       init.defaultBranch = "main";
