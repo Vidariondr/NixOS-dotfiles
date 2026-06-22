@@ -43,6 +43,7 @@
     # NetworkManager GUI
     pkgs.networkmanagerapplet
     # Discord client
+    pkgs.vesktop
     pkgs.anydesk # Remote access
     pkgs.gnome-disk-utility # Formatting disks
     pkgs.swaybg # Wallpaper
