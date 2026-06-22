@@ -12,5 +12,6 @@
     pkgs.gimp3
     #Audio editor
     pkgs.audacity
+    pkgs.prismlauncher
   ];
 }
