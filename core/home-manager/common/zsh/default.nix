@@ -23,7 +23,6 @@
     history = {
       size = 1000; # How many commands to keep in memory during a session
       save = 1000; # How many commands to keep in history file
-      path = "/home/jakub/NixOS-dotfiles/core/home-manager/common/zsh/zsh_history";
       ignoreAllDups = true; # Doesnt add command if it was entered before
     };
 
