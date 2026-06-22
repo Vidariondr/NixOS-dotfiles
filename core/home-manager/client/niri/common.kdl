@@ -29,7 +29,7 @@ environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
-spawn-at-startup "waybar"
+//spawn-at-startup "waybar"
 spawn-at-startup "gammastep"
 spawn-at-startup "lxqt-policykit-agent"
 spawn-at-startup "copyq"
