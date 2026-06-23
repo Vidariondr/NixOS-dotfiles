@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   home.packages = [
     # Wine
-    pkgs.discord
     pkgs.wineWow64Packages.stable
     pkgs.winetricks
     # 3D Printing
