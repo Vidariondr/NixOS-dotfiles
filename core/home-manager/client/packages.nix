@@ -50,6 +50,8 @@
     pkgs.dracula-qt5-theme
     pkgs.dracula-icon-theme
     pkgs.dracula-theme
+    pkgs.darktable
+    pkgs.gphoto2
   ];
   programs.mangohud = {
     enable = true;
