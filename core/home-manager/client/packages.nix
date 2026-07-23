@@ -52,6 +52,7 @@
     pkgs.dracula-theme
     pkgs.darktable
     pkgs.gphoto2
+    pkgs.feishin
   ];
   programs.mangohud = {
     enable = true;
