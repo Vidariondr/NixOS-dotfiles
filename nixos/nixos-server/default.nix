@@ -44,6 +44,25 @@
     };
   };
 
+  systemd.services."update-gluetun-ip" = {
+    path = with pkgs; [bash coreutils gnused gnugrep glibc getent docker];
+    serviceConfig = {
+      Type = "oneshot";
+      User = "root";
+      ExecStart = "/home/jakub/docker/scripts/update-gluetun-ip.sh";
+    };
+  };
+
+  systemd.timers."update-gluetun-ip" = {
+    wantedBy = ["timers.target"];
+    timerConfig = {
+      OnBootSec = "1min";
+      OnUnitActiveSec = "5min";
+      Persistent = true;
+      Unit = "update-gluetun-ip.service";
+    };
+  };
+
   # Define hostname
   networking.hostName = "nixos_server";
 
