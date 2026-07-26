@@ -1,7 +1,7 @@
 {...}: {
   networking.firewall = {
     allowedUDPPorts = [51821];
-    allowedTCPPorts = [8888];
+    allowedTCPPorts = [8888 25565];
     extraCommands = ''
       iptables -t nat -A POSTROUTING -s 10.11.12.1/24 -o wlp1s0 -j MASQUERADE
       iptables -I FORWARD 1 -i wg0 -o wlp1s0 -j ACCEPT
