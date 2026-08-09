@@ -53,6 +53,7 @@
     pkgs.darktable
     pkgs.gphoto2
     pkgs.feishin
+    pkgs.rustdesk-flutter
   ];
   programs.mangohud = {
     enable = true;
