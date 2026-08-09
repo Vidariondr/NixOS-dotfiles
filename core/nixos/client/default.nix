@@ -12,5 +12,6 @@
     ./sddm.nix
     ./niri.nix
     ../../../optional/nixos/steam
+    ./wireshark.nix
   ];
 }
