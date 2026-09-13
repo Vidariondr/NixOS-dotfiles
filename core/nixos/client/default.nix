@@ -9,6 +9,7 @@
     ./ozone.nix
     ./packages.nix
     ./portals.nix
+    ./prusaslicer.nix
     ./sddm.nix
     ./niri.nix
     ../../../optional/nixos/steam

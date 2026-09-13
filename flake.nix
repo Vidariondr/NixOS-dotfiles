@@ -6,6 +6,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.7.0";
     nvf.url = "github:notashelf/nvf?ref=v0.8";
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v1.0.0";
@@ -22,6 +23,7 @@
     nixpkgs,
     nixpkgs-unstable,
     nixos-hardware,
+    nix-flatpak,
     nvf,
     lanzaboote,
     home-manager,
@@ -35,6 +37,8 @@
       specialArgs = {inherit affinity-nix inputs nixpkgs-unstable nvf;};
 
       modules = [
+        nix-flatpak.nixosModules.nix-flatpak
+
         # Main configuration.nix module
         ./nixos/main-pc/default.nix
 
@@ -54,6 +58,8 @@
       specialArgs = {inherit inputs nixpkgs-unstable nvf;};
 
       modules = [
+        nix-flatpak.nixosModules.nix-flatpak
+
         # Main configuration.nix module
         ./nixos/fw13
 
