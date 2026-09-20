@@ -26,6 +26,24 @@
     };
   };
 
+  systemd.timers."healthcheck" = {
+    wantedBy = ["timers.target"];
+    timerConfig = {
+      OnCalendar = "*:0/1";
+      Persistent = true;
+      Unit = "healthcheck.service";
+    };
+  };
+
+  systemd.services."healthcheck" = {
+    path = with pkgs; [bash curl busybox];
+    serviceConfig = {
+      Type = "oneshot";
+      User = "root";
+      ExecStart = "/home/jakub/docker/scripts/healthcheck.sh";
+    };
+  };
+
   systemd.timers."kopia-estimate" = {
     wantedBy = ["timers.target"];
     timerConfig = {
