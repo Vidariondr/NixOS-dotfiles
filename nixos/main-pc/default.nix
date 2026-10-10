@@ -20,7 +20,11 @@
     };
   };
 
-  nixpkgs.overlays = [affinity-nix.overlays.default];
+  nixpkgs.overlays = [
+  (final: prev: {
+    msitools = prev.msitools.overrideAttrs (_: { doCheck = false; });
+  })
+  affinity-nix.overlays.default];
 
   environment.systemPackages = [pkgs.affinity-v3];
 
