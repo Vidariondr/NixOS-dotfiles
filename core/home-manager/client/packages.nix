@@ -54,6 +54,9 @@
     pkgs.gphoto2
     pkgs.feishin
     pkgs.rustdesk-flutter
+    pkgs.grim
+    pkgs.slurp
+    pkgs.cursor-clip
   ];
   programs.mangohud = {
     enable = true;

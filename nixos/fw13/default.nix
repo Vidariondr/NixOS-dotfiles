@@ -1,9 +1,10 @@
-{...}: {
+{umbriel,...}: {
   imports = [
     ./hardware-configuration.nix
     ../../core/nixos/common
     ../../core/nixos/client
     ../../optional/nixos/qemu
+    umbriel.nixosModules.default
   ];
 
   # Enable touchpad support (enabled default in most desktopManager).

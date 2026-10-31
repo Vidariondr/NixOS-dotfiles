@@ -1,12 +1,12 @@
 {...}: {
   imports = [
-    ./copyq
     ./gammastep.nix
     ./gtk_qt.nix
     ./home-manager-options.nix
     ./kitty.nix
     ./nemo.nix
     ./niri
+    ./umbriel
     ./packages.nix
     ./swaync.nix
     ./symlinks.nix

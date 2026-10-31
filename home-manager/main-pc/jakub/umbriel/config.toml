@@ -1,0 +1,25 @@
+[include]
+files = [
+  "common.toml"
+]
+
+[input.mouse]
+accel_profile = "flat"
+
+[output.DP-1]
+mode = "2560x1440@180"
+position = [0, 0]
+vrr = "always"
+
+[output.DP-3]
+mode = "2560x1440@180"
+position = [2560, 0]
+vrr = "always"
+
+[general]
+autostart = ["swaybg -i /home/jakub/Pictures/wallpaper.jpg -m fit"]
+
+[keybinds]
+"Mod+X" = { action = "spawn playerctl play-pause", allow_when_locked = true }
+"Mod+Z" = { action = "spawn playerctl previous", allow_when_locked = true }
+"Mod+C" = { action = "spawn playerctl next", allow_when_locked = true }

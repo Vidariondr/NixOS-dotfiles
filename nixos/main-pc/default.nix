@@ -1,5 +1,6 @@
 {
   affinity-nix,
+  umbriel,
   pkgs,
   ...
 }: {
@@ -9,6 +10,7 @@
     ../../core/nixos/client
     ../../optional/nixos/qemu
     ../../optional/nixos/docker
+    umbriel.nixosModules.default
   ];
 
   services.openssh = {

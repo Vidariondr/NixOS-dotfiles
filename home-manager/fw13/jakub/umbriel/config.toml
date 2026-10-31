@@ -1,0 +1,31 @@
+[inlude]
+files = [
+  "common.toml"
+]
+
+[general]
+autostart = ["swaybg -i /home/jakub/Pictures/wallpaper.jpg -m center"]
+
+[input.touchpad]
+tap = true
+sensitivity = 0.2
+scroll_method = "two_finger"
+
+[input.mouse]
+sensitivity = 0.2
+
+[output.eDP-1]
+mode = "2256x1504@60"
+scale = 1.5
+
+[keybinds]
+"XF86AudioRaiseVolume" = { action = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0", allow_when_locked = true }
+"XF86AudioLowerVolume" = { action = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-", allow_when_locked = true }
+"XF86AudioMute" = { action = "spawn wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle", allow_when_locked = true }
+"XF86AudioMicMute" = { action = "spawn wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle", allow_when_locked = true }
+"XF86AudioPlay" = { action = "spawn playerctl play-pause", allow_when_locked = true }
+"XF86AudioStop" = { action = "spawn playerctl stop", allow_when_locked = true }
+"XF86AudioPrev" = { action = "spawn playerctl previous", allow_when_locked = true }
+"XF86AudioNext" = { action = "spawn playerctl next", allow_when_locked = true }
+"XF86MonBrightnessUp" = { action = "spawn brightnessctl --class=backlight set +10%", allow_when_locked = true }
+"XF86MonBrightnessDown" = { action = "spawn brightnessctl --class=backlight set 10%-", allow_when_locked = true }

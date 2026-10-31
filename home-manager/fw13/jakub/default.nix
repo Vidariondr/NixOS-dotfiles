@@ -4,6 +4,7 @@
     ../../../core/home-manager/client
     ./git.nix
     ./niri
+    ./umbriel
     ./packages.nix
     ./waybar.nix
   ];

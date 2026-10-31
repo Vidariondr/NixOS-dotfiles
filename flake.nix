@@ -16,6 +16,7 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    umbriel.url = "github:noctalia-dev/umbriel";
   };
 
   outputs = {
@@ -27,6 +28,7 @@
     nvf,
     lanzaboote,
     home-manager,
+    umbriel,
     ...
   } @ inputs: {
     nixosConfigurations.kubapc = nixpkgs.lib.nixosSystem {
@@ -34,7 +36,7 @@
       system = "x86_64-linux";
 
       # Passing variables to other modules
-      specialArgs = {inherit affinity-nix inputs nixpkgs-unstable nvf;};
+      specialArgs = {inherit affinity-nix inputs nixpkgs-unstable umbriel nvf;};
 
       modules = [
         nix-flatpak.nixosModules.nix-flatpak
@@ -55,7 +57,7 @@
       system = "x86_64-linux";
 
       # Passing variables to other modules
-      specialArgs = {inherit inputs nixpkgs-unstable nvf;};
+      specialArgs = {inherit inputs nixpkgs-unstable umbriel nvf;};
 
       modules = [
         nix-flatpak.nixosModules.nix-flatpak
