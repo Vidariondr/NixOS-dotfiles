@@ -5,7 +5,6 @@
     ./home-manager-options.nix
     ./kitty.nix
     ./nemo.nix
-    ./niri
     ./umbriel
     ./packages.nix
     ./swaync.nix

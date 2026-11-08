@@ -11,7 +11,6 @@
     ./portals.nix
     ./prusaslicer.nix
     ./sddm.nix
-    ./niri.nix
     ./umbriel.nix
     ../../../optional/nixos/steam
     ./wireshark.nix
