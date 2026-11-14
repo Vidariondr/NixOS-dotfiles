@@ -1,4 +1,4 @@
-[inlude]
+[include]
 files = [
   "common.toml"
 ]
