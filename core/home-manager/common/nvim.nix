@@ -2,7 +2,18 @@
   programs.nvf = {
     enable = true;
     settings.vim = {
-      autocomplete.nvim-cmp.enable = true;
+      clipboard.registers = "unnamedplus";
+      comments.comment-nvim.enable = true;
+      git = {
+        enable = true;
+        gitsigns.enable = true;
+      };
+      telescope.enable = true;
+      terminal.toggleterm.enable = true;
+      utility.surround.enable = true;
+      autocomplete.nvim-cmp.enable = false;
+      autocomplete.blink-cmp.enable = true;
+      autocomplete.blink-cmp.setupOpts.signature.enabled = true;
       autopairs.nvim-autopairs.enable = true;
       binds.whichKey.enable = true;
       diagnostics = {
@@ -24,30 +35,37 @@
         enableTreesitter = true;
         bash.enable = true;
         css.enable = true;
-        css.format.type = ["prettierd"];
+        css.format.type = ["prettier"];
         html.enable = true;
         nix.enable = true;
+        nix.lsp.servers = ["nixd"];
         markdown.enable = true;
         python.enable = true;
-        ts.format.type = ["prettierd"];
+        python.format.type = ["ruff"];
+        typescript.enable = true;
+        typescript.format.type = ["prettier"];
+        toml.enable = true;
+        yaml.enable = true;
       };
       lsp = {
         enable = true;
         formatOnSave = true;
         lspkind.enable = true;
         lspsaga.enable = true;
-        lspSignature.enable = true;
         trouble.enable = true;
       };
       mini = {
         animate.enable = true;
         indentscope.enable = true;
       };
-      minimap.codewindow.enable = true;
       notify.nvim-notify.enable = true;
       options = {
         autoindent = true;
         mouse = "cv";
+        shiftwidth = 2;
+        tabstop = 2;
+        softtabstop = 2;
+        expandtab = true;
       };
       statusline = {
         lualine = {
@@ -61,6 +79,7 @@
         transparent = false;
       };
       treesitter.indent.enable = false;
+      treesitter.context.enable = false;
       ui = {
         breadcrumbs.enable = true;
         colorizer.enable = true;
@@ -68,13 +87,13 @@
         smartcolumn.enable = true;
       };
       visuals = {
-        cinnamon-nvim.enable = true;
         fidget-nvim.enable = true;
         highlight-undo.enable = true;
         indent-blankline.enable = true;
         nvim-cursorline.enable = true;
         nvim-scrollbar.enable = true;
         nvim-web-devicons.enable = true;
+        rainbow-delimiters.enable = true;
       };
     };
   };

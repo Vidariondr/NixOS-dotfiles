@@ -7,7 +7,7 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.7.0";
-    nvf.url = "github:notashelf/nvf?ref=v0.8";
+    nvf.url = "github:notashelf/nvf?ref=v26.07";
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v1.0.0";
       inputs.nixpkgs.follows = "nixpkgs";
