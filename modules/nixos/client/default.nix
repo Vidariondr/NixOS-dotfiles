@@ -1,0 +1,18 @@
+{...}: {
+  imports = [
+    ./audio.nix
+    ./easyeffects.nix
+    ./nemo.nix
+    ./networking-localsend.nix
+    ./networking-server-domain.nix
+    ./office.nix
+    ./ozone.nix
+    ./packages.nix
+    ./portals.nix
+    ./prusaslicer.nix
+    ./sddm.nix
+    ./umbriel.nix
+    ./steam.nix
+    ./wireshark.nix
+  ];
+}

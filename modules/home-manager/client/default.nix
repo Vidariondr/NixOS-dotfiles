@@ -1,0 +1,15 @@
+{...}: {
+  imports = [
+    ./gammastep.nix
+    ./gtk_qt.nix
+    ./home-manager-options.nix
+    ./kitty.nix
+    ./nemo.nix
+    ./umbriel
+    ./packages.nix
+    ./swaync.nix
+    ./symlinks.nix
+    ./xdg.nix
+    ./zsh.nix
+  ];
+}
