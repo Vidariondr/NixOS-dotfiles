@@ -41,14 +41,8 @@
       modules = [
         nix-flatpak.nixosModules.nix-flatpak
 
-        # Main configuration.nix module
-        ./nixos/main-pc/default.nix
-
-        # Secure boot module
-        ./optional/nixos/secureboot
-
-        # Home-manager module
-        ./home-manager/main-pc
+        # Main configuration.nix module (also wires in its home-manager config)
+        ./hosts/main-pc
       ];
     };
 
@@ -62,17 +56,11 @@
       modules = [
         nix-flatpak.nixosModules.nix-flatpak
 
-        # Main configuration.nix module
-        ./nixos/fw13
+        # Main configuration.nix module (also wires in its home-manager config)
+        ./hosts/fw13
 
         # Framework specific hardware configuration
         nixos-hardware.nixosModules.framework-13-7040-amd
-
-        # Secure boot module
-        ./optional/nixos/secureboot
-
-        # Home-manager module
-        ./home-manager/fw13
       ];
     };
 
@@ -84,11 +72,8 @@
       specialArgs = {inherit inputs nixpkgs-unstable nvf;};
 
       modules = [
-        # Main configuration.nix module
-        ./nixos/nixos-server
-
-        # Home-manager module
-        ./home-manager/nixos-server
+        # Main configuration.nix module (also wires in its home-manager config)
+        ./hosts/nixos-server
       ];
     };
   };
