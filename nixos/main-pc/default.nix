@@ -23,12 +23,13 @@
   };
 
   nixpkgs.overlays = [
-  (final: prev: {
-    msitools = prev.msitools.overrideAttrs (_: { doCheck = false; });
-  })
-  affinity-nix.overlays.default];
+    (final: prev: {
+      msitools = prev.msitools.overrideAttrs (_: {doCheck = false;});
+    })
+    affinity-nix.overlays.default
+  ];
 
-  environment.systemPackages = [pkgs.affinity-v3];
+  environment.systemPackages = [pkgs.affinity-v3 pkgs.claude-code];
 
   networking.networkmanager.insertNameservers = ["9.9.9.9" "1.1.1.1"];
 
